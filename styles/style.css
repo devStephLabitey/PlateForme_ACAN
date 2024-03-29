@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --couleur1: #160252; 
+    --couleur2: #f5f5f5;
+    --couleur3: #360eb0;
+    --couleur4: #1100ff8b;
+    /* Définir une variable pour la couleur principale */
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+
+/*======================== navbar design start====================== */
+.navBar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background: rgba(245, 245, 245, 0.578);
+    backdrop-filter: blur(1vh);
+    height: 15vh;
+    border-bottom: solid 2vh whitesmoke;
+    justify-content: space-around;
+    align-items: center;
+}
+.navBar .logo img{
+    height: 15vh;
+    border: 2vh solid whitesmoke;
+    margin-top: 6vh;
+    border-radius: 100%;
+   
+}
+.navBar .links{
+    width: 100vh;
+    margin-top: 4vh;
+}
+.navBar .links .linksUl{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8em;
+    justify-content: space-between;
+}
+.navBar .links .linksUl li{
+    list-style: none;
+   
+}
+.navBar .links .linksUl li a{
+    text-decoration: none;
+    color: #03045e;
+}
+.navBar form{
+    background: #01243846;
+    padding: 1vh;
+    border-radius: 50vh;
+}
+.navBar form input{
+    border: none;
+    border-radius: 50vh;
+    padding-left: 2vh;
+    font-weight: light;
+    outline: none;
+}
+.navBar form button{
+    border: none;
+    padding: 1vh;
+    border-radius: 100%;
+}
+
+.burgerMenu{
+    height: 5vh;
+    display: none;
+}
+/*======================== navbar design end ====================== */
+
+
+
+/*======================== Acceuil design start ====================== */
+#acceuil{
+    margin-top: 23vh;
+    padding-left: 8vh;
+    position: relative;
+}
+#acceuil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.homeText {
+    line-height: 1.5vh;
+}
+.homeText .pt1{
+    color: #03045e;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.homeText .pt1 span{
+    color: #007bff;
+}
+.pub{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 3vh;
+}
+.pub .pb{
+    display: flex;
+    gap: 1vh;
+    margin: 1vh;
+    align-items: center;
+}
+.pub .pb p{
+    margin-top: 2vh;
+}
+.pub .pb img{
+    height: 3vh;
+    
+}
+.join{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 2vh;
+    text-decoration: none;
+}
+.join img{
+    height: 4vh;
+    width: 4vh;
+}
+.join button{
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+}
+.join button:hover{
+    color: white;
+    background: #03045e;
+}
+.HomeImg img{
+    height: 60vh;
+    padding-right: 6vh;
+}
+#acceuil .anime{
+    position: absolute;   
+    clip-path: circle();
+    z-index: -1;
+    
+}
+.Homeanime1{
+    background: #03045e;
+    bottom: 15%;
+    right: 15%;
+    height: 15vh;
+    width: 15vh;
+}
+.Homeanime2{
+    background: #03045e;
+    bottom: 15%;
+    right: 15%;
+    height: 6vh;
+    width: 6vh;
+    background: #007bff;
+}
+.Homeanime3{
+    background: #03045e;
+    top: 15%;
+    left: 35%;
+    height: 17vh;
+    width: 17vh;
+    background: #007bff;
+}
+.Homeanime4{
+    background: #03045e;
+    top: 15%;
+    left: 35%;
+    height: 7vh;
+    width: 7vh;
+    background: #03045e;
+}
+.Homeanime5{
+    background: #03045e;
+    top: 5%;
+    left: 65%;
+    height: 7vh;
+    width: 7vh;
+    background: #03045e;
+}
+.Homeanime6{
+    background: #03045e;
+    bottom: 5%;
+    left: 25%;
+    height: 7vh;
+    width: 7vh;
+    background: #007bff;
+}
+/*======================== Acceuil design end ====================== */
+
+
+
+/*======================== services design start ====================== */
+#Service{
+    margin-top: 10vh;
+    padding: 6vh;
+   
+}
+#Service .section_title{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #03045e;
+}
+.servicesDiv{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    margin-top: 1vh;
+    height: 60vh;
+}
+.servicesDiv .services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vh;
+    border: solid whitesmoke;
+    color: #03045e;
+    position: relative;
+    overflow: hidden;
+    padding: 1vh;
+    transform-origin: top right;
+    transition: ease-in-out .3s;
+}
+.servicesDiv .services img{
+    height: 20vh;
+    margin: 2vh;
+   
+    
+}
+.servicesDiv .services:hover{
+
+  background: #f6f6fa;
+}
+.servicesDiv .services .text_title{
+    font-size: large;
+    font-weight: 700;
+    color: #007bff;
+   
+}
+.servicesDiv .services .servText{
+    text-align: center;
+}
+.animCircle{
+    position: absolute;
+    top: -4vh;
+    right: -5vh;
+    height: 13vh;
+    width: 13vh;
+    clip-path: circle();
+    background: #03045e;
+}
+.readMore{
+    background: #03045e;
+    color: white;
+}
+/*======================== services design end ====================== */
+
+
+
+/*======================== about design end ====================== */
+
+#apropos{
+    color: #03045e;
+}
+/*======================== about design end ====================== */
+
+
+
+/*======================== rappel design end ====================== */
+
+#Insc{
+    color: #03045e;
+    display: flex;
+    justify-content: space-between;
+    padding: 6vh;
+}
+#Insc .TextInsc{
+    margin-top: 10vh;
+}
+#Insc .TextInsc_title{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 1vh;
+}
+#Insc .TextInsc_text{
+    font-size: 1.1em;
+}
+#Insc .InscImg{
+    position: relative;
+}
+#Insc .InscImg img{
+    height: 55vh;
+}
+#Insc .InscImg .anime{
+    position: absolute;
+    clip-path: circle();
+}
+#Insc .InscBtn{
+    text-decoration: none;
+    background: #007bff;
+    
+}
+#Insc .InscBtn a{
+    color: white;
+    text-decoration: none;
+}
+.rappel1{
+    top: 35%;
+    background: #03045e;
+    left: 35%;
+    height: 13vh;
+    width:  13vh;
+}
+.rappel2{
+    top: 35%;
+    background: #007bff;
+    left: 35%;
+    height: 4vh;
+    width:  4vh;
+}
+/*======================== rappel design end ====================== */
+
+
+
+@media screen and (max-width:180vh) {
+    #acceuil{
+        width: 100%;
+    }
+    #acceuil .HomeImg img{
+        height: 45vh;
+    }
+
+    .searchBar form{
+        width: 28vh;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 4vh;
+    }
+    .searchBar form input{
+        width: 18vh;
+        height: 4vh;
+    }
+    .account{
+        margin-top: 4vh;
+    }
+    #acceuil{
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+    #acceuil .homeText {
+      
+        font-size: 0.8em;
+    }
+    #acceuil .homeText .pt1{
+        line-height: 3vh;
+    }
+
+    .navBar .logo img{
+        height: 11vh;
+    }
+
+
+    #Insc{
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+    }
+    #Insc .InscImg img{
+        height: 40vh;
+        padding-left: 2vh;
+    }
+   .navBar{
+    justify-content: space-between;
+   }
+    .burgerMenu{
+        display: block;
+        margin-top: 4vh;
+        
+    }
+    .navBar .links {
+       background: white;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: left;
+        position: absolute;
+        top: 10vh;
+        opacity: 0;
+        z-index: -1;
+        padding-top: 4vh;
+        margin-left: -2vh;
+        
+    }
+    .links.Menu-toggle{
+        opacity: 1;
+    }
+    .navBar .links .linksUl{
+        display: flex;
+       align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navBar .links .linksUl li{
+        border-bottom: solid 1px;
+        width: 100%;
+        padding: 4vh;
+    }
+    .join button{
+        width: 25vh;
+    }
+   
+    #Service{
+        width: 100%;
+        height: 160vh;
+    }
+    .servicesDiv{
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+       height: 150vh;
+       width: 100%;
+       
+    }
+    .servicesDiv .services{
+       width: 100%;
+       margin: 1vh;
+    }
+    #Insc .TextInsc{
+        margin-top: 5vh;
+    }
+
+   
+}
+
+@media screen and (max-width:100vh){
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #backToTopBtn img{
+    height: 5vh;
+  }
+  
+  #backToTopBtn:hover {
+    background-color: #0056b3;
+  }
+/* -----------------------backToTopBtn end-------------- */
+
