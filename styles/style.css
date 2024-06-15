@@ -5,15 +5,30 @@
     --couleur1: #160252; 
     --couleur2: #f5f5f5;
     --couleur3: #360eb0;
-    --couleur4: #1100ff8b;
+    --couleur4: #6C63FF;
+    --couleur5: #f5f5f593;
+    --couleur6: #03045e;
+    --white1: white;
+    --white2: rgba(245, 245, 245, 0.788);
+    --formColor: #01243846;
+    --backtop: #007bff;
+    --black1: rgba(0, 0, 0, 0.68);
+    --black2: rgba(0, 0, 0, 0.628);
+
+    --bigBg: #463de973;
+
+    --formColor1:#ffffff56;
+    --formColor2:  #6b63ff54;
+
+    --shadow: #03055e35;
+
+    --star: gold;
     /* Définir une variable pour la couleur principale */
 }
 html{
     scroll-behavior: smooth;
 }
-body{
 
-}
 *{
     padding: 0;
     margin: 0;
@@ -25,16 +40,17 @@ body{
     display: flex;
     position: fixed;
     width: 100%;
-    background: rgba(245, 245, 245, 0.578);
+    background: var(--couleur4);
     backdrop-filter: blur(1vh);
     height: 15vh;
-    border-bottom: solid 2vh whitesmoke;
+    border-bottom: solid 2vh var(--white2);
     justify-content: space-around;
     align-items: center;
 }
+
 .navBar .logo img{
     height: 15vh;
-    border: 2vh solid whitesmoke;
+    border: 2vh solid var(--white2);
     margin-top: 6vh;
     border-radius: 100%;
    
@@ -56,10 +72,10 @@ body{
 }
 .navBar .links .linksUl li a{
     text-decoration: none;
-    color: #03045e;
+    color: var(--white1);
 }
 .navBar form{
-    background: #01243846;
+    background: var(--formColor);
     padding: 1vh;
     border-radius: 50vh;
 }
@@ -75,271 +91,980 @@ body{
     padding: 1vh;
     border-radius: 100%;
 }
-
+.fa-user{
+    color: white;
+}
 .burgerMenu{
     height: 5vh;
     display: none;
 }
 /*======================== navbar design end ====================== */
 
-
-
-/*======================== Acceuil design start ====================== */
-#acceuil{
-    margin-top: 23vh;
-    padding-left: 8vh;
-    position: relative;
+/* ============================= acceuil's design start ============================== */
+.acceuil{
+    padding-top: 10%;
+    background: var(--black1);
+    height: 120vh;
 }
-#acceuil{
+.bg_img{
+    background: url(../assets/img/pexels-mikhail-nilov-8730327.jpg) fixed left/cover;
+}
+.acceuil .FirstText{
+    font-size: 11vh;
+    font-weight: 800;
+}
+.acceuil .FirstText .fstOne{
+    color: var(--couleur4);
+}
+.dynamics{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    color: var(--couleur1);
+    gap: 2vh;
+    padding-left: 7vh;
 }
-.homeText {
-    line-height: 1.5vh;
+
+.text-container {
+    font-size: 12vh;
+    padding-top: -2%;
+   color: var(--white1);
 }
-.homeText .pt1{
-    color: #03045e;
+
+
+@keyframes forme {
+    0%{
+        transform: translateY(-12px);
+    }
+    50%{
+        transform: translateY(12px)
+    }
+    100%{
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes forme1 {
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px)
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+
+.blinking-cursor {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 10vh;
+    color: var(--backtop);
+    animation: blink 0.7s infinite;
 }
-.homeText .pt1 span{
-    color: #007bff;
+.form1{
+    position: absolute;
+    height: 5vh;
+    width: 5vh;
+    background: transparent;
+    border: 3vh solid var(--formColor1);
+    border-radius: 100%;
+    animation: forme 3s alternate infinite;
 }
-.pub{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 3vh;
+.form2{
+    position: absolute;
+    height: 20vh;
+    width: 20vh;
+    background: var(--formColor1);
+    border-radius: 100%;
+    top: 30%;
+    left: 50%;
+    animation: forme1 10s alternate infinite;
+
 }
-.pub .pb{
-    display: flex;
-    gap: 1vh;
-    margin: 1vh;
-    align-items: center;
-}
-.pub .pb p{
-    margin-top: 2vh;
-}
-.pub .pb img{
-    height: 3vh;
-    
-}
-.join{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-top: 2vh;
-    text-decoration: none;
-}
-.join img{
-    height: 4vh;
-    width: 4vh;
-}
-.join button{
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-}
-.join button:hover{
-    color: white;
-    background: #03045e;
-}
-.HomeImg img{
-    height: 60vh;
-    padding-right: 6vh;
-}
-#acceuil .anime{
-    position: absolute;   
-    clip-path: circle();
-    z-index: -1;
-    
-}
-.Homeanime1{
-    background: #03045e;
-    bottom: 15%;
-    right: 15%;
+.form3{
+    position: absolute;
     height: 15vh;
     width: 15vh;
+    background: var(--formColor1);
+    border-radius: 100%;
+    top: 60%;
+    left: 36%;
 }
-.Homeanime2{
-    background: #03045e;
-    bottom: 15%;
-    right: 15%;
-    height: 6vh;
-    width: 6vh;
-    background: #007bff;
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
-.Homeanime3{
-    background: #03045e;
-    top: 15%;
-    left: 35%;
-    height: 17vh;
-    width: 17vh;
-    background: #007bff;
-}
-.Homeanime4{
-    background: #03045e;
-    top: 15%;
-    left: 35%;
-    height: 7vh;
-    width: 7vh;
-    background: #03045e;
-}
-.Homeanime5{
-    background: #03045e;
-    top: 5%;
-    left: 65%;
-    height: 7vh;
-    width: 7vh;
-    background: #03045e;
-}
-.Homeanime6{
-    background: #03045e;
-    bottom: 5%;
-    left: 25%;
-    height: 7vh;
-    width: 7vh;
-    background: #007bff;
-}
-/*======================== Acceuil design end ====================== */
 
-
-
-/*======================== services design start ====================== */
-#Service{
-    margin-top: 10vh;
-    padding: 6vh;
+.btns{
+    padding: 2vh 4vh;
+    border-radius: 10vh;
+    background: var(--couleur4);
+    color: var(--white1);
+    text-decoration: none;
+    transition: all ease-in-out .3s;
+    transform-origin: center;
    
 }
-#Service .section_title{
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #03045e;
+.btns:hover{
+    background: var(--white1);
+    color: var(--);
+    padding: 2vh 6vh;
+    cursor: pointer;
 }
-.servicesDiv{
+.accBtn{
+    margin-top: 5vh;
+    position: absolute;
+}
+
+.divAcc{
+  position: relative;  
+    
+}
+ .firstCircle{
+    position: absolute;
+   height: 90vh;
+   border-radius: 100%;
+   width: 90vh;
+   margin-left: 5vh;
+    background: var( --formColor2);
+}
+
+.divAcc .img_lap{
+    margin-left: 22%;
+    margin-top: 20%;
+    height: 50vh;
+    position: absolute;
+}
+.acan{
+    position: absolute;
+    height: 10vh;
+    top: 40vh;
+    left: 42%;
+}
+.acan:hover{
+    background: var(--formColor1);
+   border-radius: 40vh;
+}
+/* ============================= acceuil's design end ============================== */
+
+
+/* ============================= presentation's design start ============================== */
+.preContainer{
+    position: relative;
+    width: 60vh;
     display: flex;
-    flex-direction: row;  
-    justify-content: space-between;
-    margin-top: 1vh;
-    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
-.servicesDiv .services{
+.preContainer .cards{
+    position: relative;
+    width: 45vh;
+    height: 40vh;
+    background: var(--couleur4);
+    margin-top: 5vh;
+    padding: 15vh 5vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 60vh;
-    border: solid whitesmoke;
-    color: #03045e;
-    position: relative;
-    overflow: hidden;
-    padding: 1vh;
-    transform-origin: top right;
-    transition: ease-in-out .3s;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
 }
-.servicesDiv .services img{
-    height: 20vh;
-    margin: 2vh;
-   
+
+.preContainer .cards:hover{
+     height: 60vh;
+}
+.preContainer .cards .image{
+    position: relative;
+    height: 60vh;
+    top: -20vh;
+    left: 0.5vh;
+    z-index: 1;
+}
+.preContainer .cards .image img{
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: -1vh -1vh 6vh var(--shadow);
+}
+
+.preContainer .cards .content{
+    position: relative;
+    padding:  1vh;
+    text-align: center;
+    color: var(--white1);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    font-size: 1em;
+}
+.preContainer .cards .content h1{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.preContainer .cards .content p{
+    font-size: 13px;
+}
+.preContainer .cards:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -16vh;
+    transition-delay: 0.3s;
+    
+
+}
+.btnCard{
+    border: solid 1px var(--white1);
+    margin-top: 2Vh;
+}
+.PresentTitle{
+    text-align: center;
+    margin: 13vh;
     
 }
-.servicesDiv .services:hover{
-
-  background: #f6f6fa;
-}
-.servicesDiv .services .text_title{
-    font-size: large;
+.PresentTitle h1{
     font-weight: 700;
-    color: #007bff;
-   
+    margin-bottom: 5vh;
 }
-.servicesDiv .services .servText{
-    text-align: center;
+.sectionTitle{
+    margin: 4vh;
 }
-.animCircle{
+
+
+.ld1{
     position: absolute;
-    top: -4vh;
-    right: -5vh;
-    height: 13vh;
-    width: 13vh;
-    clip-path: circle();
-    background: #03045e;
+    top: 64vh;
+    left: 3vh;
+}
+.ld2{
+    position: absolute;
+    top: 40vh;
+    left: 100vh;
+}
+.ld3{
+    position: absolute;
+    top: 100vh;
+    left: 130vh;
+}
+.loader {
+    --path: #2f3545;
+    --dot: #5628ee;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+  
+  .loader:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader svg rect, .loader svg polygon, .loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader.triangle {
+    width: 48px;
+  }
+  
+  .loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  @keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+  
+    66% {
+      stroke-dashoffset: 147;
+    }
+  
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  
+  @keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+  
+    66% {
+      transform: translate(10px, -18px);
+    }
+  
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  
+  @keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+  
+    50% {
+      stroke-dashoffset: 128;
+    }
+  
+    75% {
+      stroke-dashoffset: 192;
+    }
+  
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  
+  @keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(18px, -18px);
+    }
+  
+    75% {
+      transform: translate(0, -36px);
+    }
+  
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  
+  @keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+  
+    50% {
+      stroke-dashoffset: 175;
+    }
+  
+    75% {
+      stroke-dashoffset: 225;
+    }
+  
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  
+  .loader {
+    display: inline-block;
+    margin: 0 16px;
+  }
+  
+   
+/* ============================= presentation's design end ============================== */
+
+/* ============================= about's design end ============================== */
+#apropos{
+    margin-top: 15vh;
+    padding-bottom: 4vh;
+    position: relative;
+    height: 100vh;
+    margin-bottom: 18vh;
+}
+.wows{
+  background: var(--couleur4);
+   height: 100vh;
+   border-radius: 2vh;
+   padding-top: 8vh;
+   color: var(--white1);
+   padding-left: 1vh;
 }
 .readMore{
-    background: #03045e;
-    color: white;
+    margin-top: 5vh;
 }
-/*======================== services design end ====================== */
-
-
-
-/*======================== about design end ====================== */
-
-#apropos{
-    color: #03045e;
+.More{
+  border: solid 1px var(--white1);
+ 
 }
-/*======================== about design end ====================== */
-
-
-
-/*======================== rappel design end ====================== */
-
-#Insc{
-    color: #03045e;
-    display: flex;
-    justify-content: space-between;
-    padding: 6vh;
+.readMore:hover{
+    border: solid 1px var(--couleur4);
 }
-#Insc .TextInsc{
-    margin-top: 10vh;
-}
-#Insc .TextInsc_title{
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #007bff;
-    margin-top: 1vh;
-}
-#Insc .TextInsc_text{
-    font-size: 1.1em;
-}
-#Insc .InscImg{
-    position: relative;
-}
-#Insc .InscImg img{
-    height: 55vh;
-}
-#Insc .InscImg .anime{
+.form4{
     position: absolute;
-    clip-path: circle();
+    height: 40vh;
+    width: 40vh;
+    background: transparent;
+    border-radius: 100%;
+    border: solid 10vh var(--formColor2);
+    top: -5vh;
 }
-#Insc .InscBtn{
-    text-decoration: none;
-    background: #007bff;
+.form5{
+    position: absolute;
+    height: 20vh;
+    width: 20vh;
+    background: transparent;
+    border-radius: 100%;
+    border: solid 5vh var(--formColor2);
+    border-style: dotted;
+    z-index: 1;
+    top: 55vh;
+    right: 9vh;
+    animation: rotate1 4s linear infinite;
+}
+@keyframes rotate1 {
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform:  rotate(180deg);
+    }
+}
+
+
+/* ============================= about's design end ============================== */
+
+
+/* ============================= event's design start ============================== */
+#event{
+    margin-top: 30vh;
+    padding-top: 2vh;
+    background: var(--couleur4);
+   padding-bottom: 8vh;
+   position: relative;
+   
+}
+.evntMore{
+    margin-top: 4vh;
+}
+.eventRow{
+    padding-left: 8vh;
+    margin-bottom: 10vh;
+}
+.event-card .card:hover{
+    background: var(--white2);
+}
+.event-card .card{
+    overflow: hidden;
+}
+.event-card .card:hover img{
+    scale: 1.1;
+    transition: .3s ease-in-out;
+}
+.event-card .card img{
+    height: 38vh;
+} 
+.form6{
+    position: absolute;
+    height: 26vh;
+    right: 0;
+    z-index: -1;
+    width: 26vh;
+    border-radius: 26% 74% 25% 75% / 70% 13% 87% 30% ;
+    background: var(--white1);
     
 }
-#Insc .InscBtn a{
-    color: white;
-    text-decoration: none;
+.form7{
+    position: absolute;
+    height: 46vh;
+    width: 46vh;
+    left: 50%;
+    top: -3%;
+    z-index: -1;
+    border-radius: 30% 70% 70% 30% / 27% 49% 51% 73% ;
+    background: var(--white1);
+
 }
-.rappel1{
-    top: 35%;
-    background: #03045e;
-    left: 35%;
-    height: 13vh;
-    width:  13vh;
+.form8{
+    position: absolute;
+    height: 26vh;
+    width: 26vh;
+    z-index: -1;
+    border-radius: 90% 10% 70% 30% / 27% 49% 51% 73% ;
+    background: var(--white1);
+
 }
-.rappel2{
-    top: 35%;
-    background: #007bff;
-    left: 35%;
-    height: 4vh;
-    width:  4vh;
+.form9{
+    position: absolute;
+    height: 46vh;
+    width: 46vh;
+    top: 75%;
+    left: 45%;
+    z-index: -1;
+    border-radius: 90% 10% 70% 30% / 27% 49% 51% 73% ;
+    background: var(--white2);
+
 }
-/*======================== rappel design end ====================== */
+.form10{
+    position: absolute;
+    height: 26vh;
+    width: 26vh;
+    border-radius: 90% 10% 70% 30% / 27% 49% 51% 73% ;
+    background: var(--white2);
+    top: 14%;
+    left: 15%;
+    z-index: -1;
+}
+
+/* ============================= event's design end ============================== */
+
+/* ============================= category's design start ============================== */
+
+.category img,
+.course-item img {
+    transition: .5s;
+}
+
+.category a:hover img,
+.course-item:hover img {
+    transform: scale(1.1);
+}
+h5{
+    color: var(--couleur4);
+}
+small{
+    color: var(--couleur4);
+}
+/* ============================= category's design end ============================== */
 
 
+/* ============================= courses's design end ============================== */
+#courses{
+    position: relative;
+    margin-top: 15vh;
+    overflow: hidden;
+}
+.fa-star{
+    color: var(--star);
+}
+
+.bigBg{
+  position: absolute;
+  height: 220vh;
+  width: 300vh;
+  background: var(--bigBg);
+  z-index: -1;
+  rotate: -30deg;
+  
+}
+.form11{
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  z-index: -1;
+
+  height: 30vh;
+  width: 30vh;
+  border-radius: 100%;
+  background: var(--white2);
+
+}
+
+
+.socket {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    margin-top: -100px;
+  }
+  
+  .hex-brick {
+    background: #000000;
+    width: 30px;
+    height: 17px;
+    position: absolute;
+    top: 5px;
+    animation-name: fade00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: fade00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  .border-top{
+    color: var(--black1);
+  }
+  .h2 {
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+  }
+  
+  .h3 {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+  }
+  
+  .gel {
+    height: 30px;
+    width: 30px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .center-gel {
+    margin-left: -15px;
+    margin-top: -15px;
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: pulse00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  .c1 {
+    margin-left: -47px;
+    margin-top: -15px;
+  }
+  
+  .c2 {
+    margin-left: -31px;
+    margin-top: -43px;
+  }
+  
+  .c3 {
+    margin-left: 1px;
+    margin-top: -43px;
+  }
+  
+  .c4 {
+    margin-left: 17px;
+    margin-top: -15px;
+  }
+  
+  .c5 {
+    margin-left: -31px;
+    margin-top: 13px;
+  }
+  
+  .c6 {
+    margin-left: 1px;
+    margin-top: 13px;
+  }
+  
+  .c7 {
+    margin-left: -63px;
+    margin-top: -43px;
+  }
+  
+  .c8 {
+    margin-left: 33px;
+    margin-top: -43px;
+  }
+  
+  .c9 {
+    margin-left: -15px;
+    margin-top: 41px;
+  }
+  
+  .c10 {
+    margin-left: -63px;
+    margin-top: 13px;
+  }
+  
+  .c11 {
+    margin-left: 33px;
+    margin-top: 13px;
+  }
+  
+  .c12 {
+    margin-left: -15px;
+    margin-top: -71px;
+  }
+  
+  .c13 {
+    margin-left: -47px;
+    margin-top: -71px;
+  }
+  
+  .c14 {
+    margin-left: 17px;
+    margin-top: -71px;
+  }
+  
+  .c15 {
+    margin-left: -47px;
+    margin-top: 41px;
+  }
+  
+  .c16 {
+    margin-left: 17px;
+    margin-top: 41px;
+  }
+  
+  .c17 {
+    margin-left: -79px;
+    margin-top: -15px;
+  }
+  
+  .c18 {
+    margin-left: 49px;
+    margin-top: -15px;
+  }
+  
+  .c19 {
+    margin-left: -63px;
+    margin-top: -99px;
+  }
+  
+  .c20 {
+    margin-left: 33px;
+    margin-top: -99px;
+  }
+  
+  .c21 {
+    margin-left: 1px;
+    margin-top: -99px;
+  }
+  
+  .c22 {
+    margin-left: -31px;
+    margin-top: -99px;
+  }
+  
+  .c23 {
+    margin-left: -63px;
+    margin-top: 69px;
+  }
+  
+  .c24 {
+    margin-left: 33px;
+    margin-top: 69px;
+  }
+  
+  .c25 {
+    margin-left: 1px;
+    margin-top: 69px;
+  }
+  
+  .c26 {
+    margin-left: -31px;
+    margin-top: 69px;
+  }
+  
+  .c27 {
+    margin-left: -79px;
+    margin-top: -15px;
+  }
+  
+  .c28 {
+    margin-left: -95px;
+    margin-top: -43px;
+  }
+  
+  .c29 {
+    margin-left: -95px;
+    margin-top: 13px;
+  }
+  
+  .c30 {
+    margin-left: 49px;
+    margin-top: 41px;
+  }
+  
+  .c31 {
+    margin-left: -79px;
+    margin-top: -71px;
+  }
+  
+  .c32 {
+    margin-left: -111px;
+    margin-top: -15px;
+  }
+  
+  .c33 {
+    margin-left: 65px;
+    margin-top: -43px;
+  }
+  
+  .c34 {
+    margin-left: 65px;
+    margin-top: 13px;
+  }
+  
+  .c35 {
+    margin-left: -79px;
+    margin-top: 41px;
+  }
+  
+  .c36 {
+    margin-left: 49px;
+    margin-top: -71px;
+  }
+  
+  .c37 {
+    margin-left: 81px;
+    margin-top: -15px;
+  }
+  
+  .r1 {
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    -webkit-animation-name: pulse00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .2s;
+  }
+  
+  .r2 {
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .4s;
+    -webkit-animation-name: pulse00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .4s;
+  }
+  
+  .r3 {
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s;
+    -webkit-animation-name: pulse00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .6s;
+  }
+  
+  .r1 > .hex-brick {
+    animation-name: fade00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    -webkit-animation-name: fade00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .2s;
+  }
+  
+  .r2 > .hex-brick {
+    animation-name: fade00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .4s;
+    -webkit-animation-name: fade00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .4s;
+  }
+  
+  .r3 > .hex-brick {
+    animation-name: fade00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s;
+    -webkit-animation-name: fade00;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: .6s;
+  }
+  
+  @keyframes pulse00 {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    50% {
+      -webkit-transform: scale(0.01);
+      transform: scale(0.01);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fade00 {
+    0% {
+      background: var(--shadow);
+    }
+  
+    50% {
+      background: var(--couleur4);
+    }
+  
+    100% {
+      background: var(--couleur6);
+    }
+  }
+  
+/* ============================= courses's design end ============================== */
+
+/* ============================= testimonial's design start ============================== */
+
+.carousel-item {
+  text-align: center;
+  
+}
+.testimonial-img {
+  width: 25vh;
+  height: 25vh;
+  border: solid 1px var(--couleur4);
+  padding: 3vh;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+.testimonial-text {
+  font-size: 1.2em;
+  margin: 20px ;
+  border-radius: 2vh;
+  padding: 3vh;
+  width: 60vh;
+  margin-left: 36%;
+  background: var(--couleur4);
+  color: var(--white1);
+}
+/* ============================= testimonial's design end ============================== */
 
 @media screen and (max-width:180vh) {
     #acceuil{
@@ -364,18 +1089,7 @@ body{
     .account{
         margin-top: 4vh;
     }
-    #acceuil{
-        flex-direction: column;
-        align-items: center;
-        gap: 4vh;
-    }
-    #acceuil .homeText {
-      
-        font-size: 0.8em;
-    }
-    #acceuil .homeText .pt1{
-        line-height: 3vh;
-    }
+   
 
     .navBar .logo img{
         height: 11vh;
@@ -400,7 +1114,7 @@ body{
         
     }
     .navBar .links {
-       background: white;
+       background: var(--white1);
        width: 100%;
        display: flex;
        align-items: center;
@@ -455,9 +1169,6 @@ body{
    
 }
 
-@media screen and (max-width:100vh){
-  
-}
 
 
 
@@ -474,15 +1185,22 @@ body{
     position: fixed;
     bottom: 20px;
     right: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--backtop);
+    color: var(--white1);
     border: none;
-    border-radius: 5px;
+    border-radius: 100%;
     cursor: pointer;
+    height: 10vh;
+    width: 10vh;
   }
   #backToTopBtn img{
     height: 5vh;
+    margin-left: -1vh;
   }
   
   #backToTopBtn:hover {
